@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Defize.Scythe", "Src\Defize.Scythe\Defize.Scythe.csproj", "{1F460867-E941-4201-9EC3-83E135D6DA15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Defize.Scythe.Test", "Src\Defize.Scythe.Test\Defize.Scythe.Test.csproj", "{47928D50-7C48-45AC-99FB-404C0F48964A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8759AA20-3F51-4822-94C1-9945809AA377}"
+	ProjectSection(SolutionItems) = preProject
+		Src\SharedAssemblyInfo.cs = Src\SharedAssemblyInfo.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F460867-E941-4201-9EC3-83E135D6DA15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F460867-E941-4201-9EC3-83E135D6DA15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F460867-E941-4201-9EC3-83E135D6DA15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F460867-E941-4201-9EC3-83E135D6DA15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47928D50-7C48-45AC-99FB-404C0F48964A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47928D50-7C48-45AC-99FB-404C0F48964A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47928D50-7C48-45AC-99FB-404C0F48964A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47928D50-7C48-45AC-99FB-404C0F48964A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
