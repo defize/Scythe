@@ -9,5 +9,11 @@
         {
             return new StringMapping();
         }
+
+        internal TConfiguration Apply(string[] arguments)
+        {
+
+            throw new NotImplementedException();
+        }
     }
 }
