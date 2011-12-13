@@ -9,7 +9,7 @@
         public void Example()
         {
             // Define apply verb configuration mappings.
-            var applyConfigurationMapper = new ArgumentMapper<ExampleApplyConfiguration>();
+            var applyConfigurationMapper = new ScytheArgumentMapper<ExampleApplyConfiguration>();
             applyConfigurationMapper.Map(x => x.Server)
                            .WithAliases("s", "svr")
                            .Default(@".\SQLEXPRESS")
@@ -20,9 +20,9 @@
                             );
 
             // bind commandline verbs to actions.
-            var app = new ApplicationEntry<ExampleApplication>();
+            var app = new ScytheApplication<ExampleApplication>();
             app.Bind(applyConfigurationMapper)
-               .To(x => x.Apply)
+               .To((a, c) => a.Apply(c))
                .WithAliases("a", "aply");
 
             // Execute application
