@@ -23,10 +23,10 @@
             var app = new ScytheApplication<ExampleApplication>();
             app.Bind(applyConfigurationMapper)
                .To((a, c) => a.Apply(c))
-               .WithAliases("a", "aply");
+               .WithAliases("apply", "a");
 
             // Execute application
-            app.Run(new[] { "apply", "Production" });
+            app.Run(new ExampleApplication(), new[] { "apply", "/Server=Production" });
         }
 
         public class ExampleApplyConfiguration

@@ -1,22 +1,28 @@
-﻿namespace Defize.Scythe
+namespace Defize.Scythe
 {
-    using System;
+    using System.Reflection;
 
-    public class StringMapping
+    public class StringMapping<TConfiguration> : MappingBase<string, TConfiguration>
     {
-        public StringMapping WithAliases(params string[] aliases)
-        {
-            return this;
-        }
+        public StringMapping(PropertyInfo property)
+            : base(property)
+        { }
 
-        public StringMapping Default(string defaultValue)
+        protected override string ConvertValue(string valueString)
         {
-            return this;
+            return valueString;
         }
+    }
 
-        public StringMapping Validate(params Func<StringValidator, bool>[] validators)
+    public class IntegerMapping<TConfiguration> : MappingBase<int, TConfiguration>
+    {
+        public IntegerMapping(PropertyInfo property)
+            : base(property)
+        { }
+
+        protected override int ConvertValue(string valueString)
         {
-            return this;
+            return int.Parse(valueString);
         }
     }
 }
