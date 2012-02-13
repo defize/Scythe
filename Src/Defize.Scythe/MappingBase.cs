@@ -76,36 +76,22 @@ namespace Defize.Scythe
             return new MappingResult { IsValid = true };
         }
 
-        public MappingBase<TMappingType, TConfiguration> WithAliases(params string[] aliases)
-        {
-            foreach (var alias in aliases)
-            {
-                _aliases.Add(alias);
-            }
+        protected abstract TMappingType ConvertValue(string valueString);
 
-            return this;
+        protected void AddAlias(string alias)
+        {
+            _aliases.Add(alias);
         }
 
-        public MappingBase<TMappingType, TConfiguration> AtPosition(int position)
-        {
-            _position = position;
-
-            return this;
-        }
-
-        public MappingBase<TMappingType, TConfiguration> Default(TMappingType defaultValue)
+        protected void SetDefault(TMappingType defaultValue)
         {
             _hasDefault = true;
             _defaultValue = defaultValue;
-
-            return this;
         }
 
-        public MappingBase<TMappingType, TConfiguration> Validate(params Func<StringValidator, bool>[] validators)
+        protected void SetPosition(int position)
         {
-            return this;
+            _position = position;
         }
-
-        protected abstract TMappingType ConvertValue(string valueString);
     }
 }

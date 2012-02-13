@@ -48,6 +48,7 @@
     <Compile Include="ArgumentMapperError.cs" />
     <Compile Include="MappingBase.cs" />
     <Compile Include="MappingResult.cs" />
+    <Compile Include="NumberValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RawArguments.cs" />
     <Compile Include="ScytheApplication`1.cs" />

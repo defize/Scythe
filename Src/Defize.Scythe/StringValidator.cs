@@ -4,19 +4,19 @@
 
     public class StringValidator
     {
-        public bool Length(uint min = 0U, uint max = 0U)
+        public void Length(uint min = 0U, uint max = 0U)
         {
-            return true;
+            
         }
 
-        public bool Matches(string match)
+        public void Matches(string match)
         {
-            return false;
+            
         }
 
-        public bool Custom(Func<string, bool> custom)
+        public void Custom(Func<string, bool> custom)
         {
-            return false;
+            
         }
     }
 }
